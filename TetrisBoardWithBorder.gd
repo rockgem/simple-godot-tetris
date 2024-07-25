@@ -9,9 +9,9 @@ var player_data = {
 }
 
 func _ready():
-	you_lose.visible = false
-	
 	OS.window_maximized = true
+	
+	you_lose.visible = false
 	
 	var file = File.new()
 	if file.file_exists(SAVE_PATH):
