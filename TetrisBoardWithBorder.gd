@@ -4,6 +4,8 @@ onready var you_lose = $YouLoseNode
 
 func _ready():
 	you_lose.visible = false
+	
+	OS.window_maximized = true
 
 func game_lost():
 	you_lose.visible = true

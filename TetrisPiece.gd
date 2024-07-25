@@ -70,7 +70,7 @@ func color_for_shape(s):
 		SHAPES.O: return Constants.COLOR.YELLOW
 		SHAPES.L: return Constants.COLOR.ORANGE
 		SHAPES.J: return Constants.COLOR.BLUE
-		SHAPES.T: return Constants.COLOR.PURPLE
+		SHAPES.T: return Constants.COLOR.PINK
 		SHAPES.S: return Constants.COLOR.RED
 		SHAPES.Z: return Constants.COLOR.GREEN
 

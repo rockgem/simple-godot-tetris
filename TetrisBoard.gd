@@ -81,6 +81,8 @@ func maybe_clear_rows(rows_to_clear):
 		landscape.clear_rows(rows_to_clear)
 		landscape.render_landscape()
 		emit_signal("rows_cleared", len(rows_to_clear))
+		
+		Sfx.get_node("Pop").play()
 	
 func add_to_landscape():
 	var absolute_positions = calculate_absolute_positions(current_x, current_y, current_piece.current_positions())
