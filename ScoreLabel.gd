@@ -8,3 +8,7 @@ func increment_rows_cleared(count):
 
 func _ready():
 	text = "Score: 0"
+
+
+func _on_TetrisBoard_lost_game():
+	rows_cleared = 0
