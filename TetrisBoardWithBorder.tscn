@@ -43,6 +43,14 @@ custom_fonts/font = SubResource( 1 )
 text = "You Lose!!!"
 uppercase = true
 
+[node name="Restart" type="Button" parent="YouLoseNode"]
+pause_mode = 2
+margin_left = 124.0
+margin_top = 276.0
+margin_right = 267.0
+margin_bottom = 308.0
+text = "Restart"
+
 [node name="TetrisBoard" parent="." instance=ExtResource( 2 )]
 position = Vector2( 32, 0 )
 
@@ -115,6 +123,7 @@ custom_fonts/font = SubResource( 6 )
 text = "Level: 1"
 script = ExtResource( 10 )
 
+[connection signal="pressed" from="YouLoseNode/Restart" to="." method="_on_Restart_pressed"]
 [connection signal="chose_next_piece" from="TetrisBoard" to="BottomDisplay/NextPieceControl/NextPiece" method="display_piece"]
 [connection signal="dropped" from="TetrisBoard" to="ShakeCamera" method="_on_TetrisBoard_dropped"]
 [connection signal="held_piece" from="TetrisBoard" to="BottomDisplay/HeldPieceControl/HeldPiece" method="display_piece"]

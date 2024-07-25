@@ -10,3 +10,10 @@ func game_lost():
 	get_tree().paused = true
 
 func _on_TetrisBoard_lost_game(): game_lost()
+
+
+func _on_Restart_pressed():
+	get_tree().paused = false
+	
+	$TetrisBoard.landscape.clear_landscape()
+	you_lose.visible = false

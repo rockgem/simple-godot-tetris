@@ -99,3 +99,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func clear_landscape():
+	points.clear()
+	
+	for i in get_children():
+		i.queue_free()
+	
+	init_points()
+	rendered_pieces.clear()
